@@ -23,5 +23,48 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 1rem;
+  border: 1rem;
 }
 
+.socials {
+  height: 24px;
+  width: 24px;
+}
+
+h1 {
+  color: #ffeaf8;
+  font-size: 3rem;
+}
+
+#links {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+#pages {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-align: left;
+}
+
+.page-button {
+  background-color: #ffeaf8;
+  color: #171717;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.page-button:hover {
+  background-color: #ffb3d1;
+  color: #1e1e1e;
+}
+
+.socials {
+  background-color: white;
+  border-radius: 0.25rem;
+}
