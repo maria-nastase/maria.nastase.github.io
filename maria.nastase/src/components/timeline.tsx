@@ -15,7 +15,7 @@ const jobs: Job[] = [
     company: "A. Berger Precision",
     date: "May 2025 – Aug. 2025",
     description:
-      "Lead development of mobile cobot cell for automating burinshing machines."
+      "Lead development of mobile cobot cell for automating burinshing machines.",
   },
   {
     role: "Electrical Engineering Team Member",
@@ -48,7 +48,7 @@ export default function Timeline() {
   };
 
   return (
-    <div className="relative ml-4">
+    <div className="relative ml-12">
       {/* Vertical line */}
       <div className="absolute left-0 top-0 h-full border-l-2 border-gray-300 dark:border-gray-600"></div>
 
