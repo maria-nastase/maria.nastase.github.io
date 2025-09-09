@@ -27,7 +27,7 @@ const electricalProjects: Project[] = [
 
 export default function ElectricalPage() {
   return (
-    <main className="p-8">
+    <main className="">
       <Navbar />
       <h1 className="text-2xl font-bold mb-6">Electrical + Hardware Projects</h1>
       <ProjectGrid projects={electricalProjects} />

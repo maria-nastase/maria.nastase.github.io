@@ -47,7 +47,7 @@ const softwareProjects: Project[] = [
 
 export default function SoftwarePage() {
   return (
-    <main className="p-8">
+    <main className="">
       <Navbar />
       <h1 className="text-2xl font-bold mb-6">Software Projects</h1>
       <ProjectGrid projects={softwareProjects} />

@@ -27,7 +27,7 @@ const automationProjects: Project[] = [
 
 export default function AutomationPage() {
   return (
-    <main className="p-8">
+    <main className="">
       <Navbar />
       <h1 className="text-2xl font-bold mb-6">Automation + Mechatronics Projects</h1>
       <ProjectGrid projects={automationProjects} />

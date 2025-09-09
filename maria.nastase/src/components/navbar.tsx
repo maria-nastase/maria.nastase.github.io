@@ -7,7 +7,7 @@ export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
-    <nav className="p-4 text-white flex gap-4 relative justify-content justify-end mr-5">
+    <nav className="p-4 text-white flex gap-4 relative justify-content justify-end mr-5 mt-2">
       <Link href="/">Home</Link>
       <Link href="/about">About</Link>
 

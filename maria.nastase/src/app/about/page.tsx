@@ -6,7 +6,7 @@ export default function About() {
     <div className="aboutme-section" id="about">
         <Navbar />
 
-        <h1>About Me</h1>
+        <h1 className="text-2xl font-bold mb-6">About Me</h1>
 
         <div id="education">
             <h2>Education</h2>

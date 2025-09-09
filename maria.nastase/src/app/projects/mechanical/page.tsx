@@ -37,7 +37,7 @@ const mechanicalProjects: Project[] = [
 
 export default function MechanicalPage() {
   return (
-    <main className="p-8">
+    <main className="">
       <Navbar />
       <h1 className="text-2xl font-bold mb-6">Mechanical Projects</h1>
       <ProjectGrid projects={mechanicalProjects} />
