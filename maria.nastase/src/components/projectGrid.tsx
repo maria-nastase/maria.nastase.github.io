@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Project } from "@/types/project";
 
 type ProjectGridProps = {
@@ -10,6 +10,18 @@ type ProjectGridProps = {
 export default function ProjectGrid({ projects }: ProjectGridProps) {
   const [selected, setSelected] = useState<Project | null>(null);
 
+  useEffect(() => {
+    if (selected) {
+      document.body.style.overflow = "hidden"; // disable scroll
+    } else {
+      document.body.style.overflow = ""; // restore scroll
+    }
+  
+    return () => {
+      document.body.style.overflow = ""; // cleanup
+    };
+  }, [selected]);  
+
   return (
     <>
       {/* Grid */}
@@ -17,7 +29,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
         {projects.map((proj) => (
           <div
             key={proj.id}
-            className="rounded-lg bg-neutral-800 bg-opacity-90 shadow hover:shadow-lg cursor-pointer overflow-hidden transition"
+            className="rounded-lg bg-neutral-800 bg-opacity-90 shadow hover:shadow-lg cursor-pointer overflow-hidden transition mb-10"
             onClick={() => setSelected(proj)}
           >
             {proj.thumbnail && (
@@ -41,7 +53,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
           className="absolute top-1/2 left-1/2 z-50 p-4"
           onClick={(e) => e.target === e.currentTarget && setSelected(null)}
         >
-          <div className="bg-white dark:bg-gray-800 rounded-lg max-w-2xl w-full p-6 shadow-lg transform -translate-x-1/2 -translate-y-1/2">
+          <div className="bg-white dark:bg-gray-800 rounded-lg max-w-2xl w-full p-6 shadow-lg transform -translate-x-1/2 -translate-y-1/2 max-h-[80vh] overflow-y-auto">
             {/* Close button */}
             <button
               className="absolute top-2 right-2 text-gray-600 dark:text-gray-300 font-bold text-xl"

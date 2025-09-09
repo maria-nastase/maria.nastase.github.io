@@ -10,18 +10,18 @@ const electricalProjects: Project[] = [
     shortDescription: "PCB that gradually ramps tube furnace to 1100 °C. ",
     longDescription:
       "...",
-    thumbnail: "",
-    images: ["/images/robot-cell-1.jpg", "/images/robot-cell-2.jpg"]
+    thumbnail: "/tubefurnace-pcb1.jpg",
+    images: ["/tubefurnace-pcb1.jpg", "/tubefurnacepcb-2.png", "/tubefurnace-pcb3.png"]
   },
   {
     id: "spin-coater-pcb",
     title: "Spin Coater PCB",
     category: "Electrical",
-    shortDescription: "PCB that controls rotation of spin coater.",
+    shortDescription: "PCB that controls rotation of a spin coater.",
     longDescription:
       "...",
-    thumbnail: "",
-    images: ["/images/useless-1.jpg", "/images/useless-2.jpg"]
+    thumbnail: "/spincoater-pcb.jpg",
+    images: ["/spincoater-pcb.jpg"]
   }
 ];
 

@@ -11,7 +11,8 @@ const softwareProjects: Project[] = [
     longDescription:
       "...",
     thumbnail: "",
-    images: ["/images/robot-cell-1.jpg", "/images/robot-cell-2.jpg"]
+    images: ["/upright1.png", "/upright2.jpg"],
+    links: [{label: "Github", url:"https://github.com/maria-nastase/Upright"}]
   },
   {
     id: "argumentor",
@@ -21,7 +22,8 @@ const softwareProjects: Project[] = [
     longDescription:
       "...",
     thumbnail: "",
-    images: ["/images/useless-1.jpg", "/images/useless-2.jpg"]
+    images: ["/argumentor.png"],
+    links: [{label: "Github", url: "https://github.com/maria-nastase/ArguMentor"}]
   },
   {
     id: "connectify",
@@ -31,17 +33,19 @@ const softwareProjects: Project[] = [
     longDescription:
       "...",
     thumbnail: "",
-    images: ["/images/useless-1.jpg", "/images/useless-2.jpg"]
+    images: ["/images/useless-1.jpg", "/images/useless-2.jpg"],
+    links: [{label: "Github", url: "https://github.com/maria-nastase/Connectify"}]
   },
   {
     id: "personal-website",
     title: "Personal Website",
     category: "Software",
-    shortDescription: "Website showcasing my projects and experience.",
+    shortDescription: "This website, showcasing my projects and experience.",
     longDescription:
       "...",
     thumbnail: "",
-    images: ["/images/useless-1.jpg", "/images/useless-2.jpg"]
+    images: ["/images/useless-1.jpg", "/images/useless-2.jpg"],
+    links: [{label: "Github", url: "https://github.com/maria-nastase/maria.nastase.github.io"}]
   }
 ];
 
