@@ -1,5 +1,6 @@
 "use client";
 
+import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 type Job = {
@@ -59,7 +60,7 @@ export default function Timeline() {
             onClick={() => toggle(idx)}
             className="flex flex-col text-left w-full"
           >
-            <h3 className="text-lg font-semibold">{job.role}</h3>
+            <h3 className="text-lg font-semibold flex justify-content">{job.role} <ChevronDown/></h3>
             <span className="text-sm text-white-500">
               {job.company} — {job.date}
             </span>

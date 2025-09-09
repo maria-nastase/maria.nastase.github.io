@@ -20,8 +20,8 @@ const automationProjects: Project[] = [
     shortDescription: "Machine that turns itself off when it is turned on.",
     longDescription:
       "...",
-    thumbnail: "/cobotThumbnail.png",
-    images: ["/images/useless-1.jpg", "/images/useless-2.jpg"]
+    thumbnail: "",
+    images: ["/srm-base.png", "/srm-baseplate.png", "/srm-schematic.png"],
   }
 ];
 

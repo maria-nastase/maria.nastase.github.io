@@ -5,13 +5,14 @@ import Navbar from "@/components/navbar";
 const mechanicalProjects: Project[] = [
   {
     id: "3D-printed-bear",
-    title: "3D Printed Bear",
+    title: "Geometric Grizzly Bear",
     category: "Mechanical",
     shortDescription: "3D printed bear puzzle designed in Solidworks. ",
     longDescription:
       "...",
     thumbnail: "",
-    images: ["/images/robot-cell-1.jpg", "/images/robot-cell-2.jpg"]
+    images: ["/images/robot-cell-1.jpg", "/bear-solidworks.png"],
+    links: [{label: "Assembly Instructions", url: "/Bear Assembly Instructions.pdf"}]
   },
   {
     id: "truck-model",
@@ -20,18 +21,18 @@ const mechanicalProjects: Project[] = [
     shortDescription: "Model truck built using various machine shop tools.",
     longDescription:
       "...",
-    thumbnail: "",
-    images: ["/images/useless-1.jpg", "/images/useless-2.jpg"]
+    thumbnail: "/truck.jpg",
+    images: ["/truck.jpg"]
   },
   {
     id: "pirate-ship",
     title: "Pirate Ship",
     category: "Mechanical",
-    shortDescription: "Pirate ship model created on Solidworks.",
+    shortDescription: "Pirate ship model created in Solidworks.",
     longDescription:
       "...",
-    thumbnail: "",
-    images: ["/images/useless-1.jpg", "/images/useless-2.jpg"]
+    thumbnail: "/pirateship.png",
+    images: ["/pirateship.png"]
   }
 ];
 
