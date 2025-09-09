@@ -21,7 +21,7 @@ export default function Navbar() {
         </button>
 
         {isDropdownOpen && (
-          <div className="absolute top-full left-0 mt-2 w-36 rounded shadow-lg z-50 overflow-hidden">
+          <div className="absolute top-full left-0 mt-2 w-30 rounded shadow-lg z-50 overflow-hidden">
             <Link
               href="/projects/automation-mechatronics"
               className="block w-full px-4 py-2 bg-white text-black hover:bg-gray-600"
