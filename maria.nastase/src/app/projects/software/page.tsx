@@ -12,6 +12,7 @@ const softwareProjects: Project[] = [
       "...",
     thumbnail: "",
     images: ["/upright1.png", "/upright2.jpg"],
+    imageCaptions: ["iOS app screens", "Web UI"],
     links: [{label: "Github", url:"https://github.com/maria-nastase/Upright"}]
   },
   {
@@ -23,6 +24,7 @@ const softwareProjects: Project[] = [
       "...",
     thumbnail: "",
     images: ["/argumentor.png"],
+    imageCaptions: ["Chatbot UI"],
     links: [{label: "Github", url: "https://github.com/maria-nastase/ArguMentor"}]
   },
   {
@@ -34,6 +36,7 @@ const softwareProjects: Project[] = [
       "...",
     thumbnail: "",
     images: ["/images/useless-1.jpg", "/images/useless-2.jpg"],
+    imageCaptions: ["Chatbot UI"],
     links: [{label: "Github", url: "https://github.com/maria-nastase/Connectify"}]
   },
   {
@@ -45,6 +48,7 @@ const softwareProjects: Project[] = [
       "...",
     thumbnail: "",
     images: ["/images/useless-1.jpg", "/images/useless-2.jpg"],
+    imageCaptions: ["Home page"],
     links: [{label: "Github", url: "https://github.com/maria-nastase/maria.nastase.github.io"}]
   }
 ];

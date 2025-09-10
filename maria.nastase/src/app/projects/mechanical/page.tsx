@@ -10,8 +10,9 @@ const mechanicalProjects: Project[] = [
     shortDescription: "3D printed bear puzzle designed in Solidworks. ",
     longDescription:
       "...",
-    thumbnail: "",
-    images: ["/images/robot-cell-1.jpg", "/bear-solidworks.png"],
+    thumbnail: "/bear-1.jpg",
+    images: ["/bear-1.jpg","/bear-2.jpg", "/bear-solidworks.png"],
+    imageCaptions: ["Front/side view", "View of back drawer", "Solidworks model"],
     links: [{label: "Assembly Instructions", url: "/Bear Assembly Instructions.pdf"}]
   },
   {
@@ -22,7 +23,8 @@ const mechanicalProjects: Project[] = [
     longDescription:
       "...",
     thumbnail: "/truck.jpg",
-    images: ["/truck.jpg"]
+    images: ["/truck.jpg"],
+    imageCaptions: ["Finished truck"]
   },
   {
     id: "pirate-ship",
@@ -32,7 +34,8 @@ const mechanicalProjects: Project[] = [
     longDescription:
       "...",
     thumbnail: "/pirateship.png",
-    images: ["/pirateship.png"]
+    images: ["/pirateship.png"],
+    imageCaptions: ["Solidworks model"]
   }
 ];
 

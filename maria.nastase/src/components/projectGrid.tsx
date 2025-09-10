@@ -9,23 +9,24 @@ type ProjectGridProps = {
 
 export default function ProjectGrid({ projects }: ProjectGridProps) {
   const [selected, setSelected] = useState<Project | null>(null);
+  const [zoomedIndex, setZoomedIndex] = useState<number | null>(null);
 
   useEffect(() => {
-    if (selected) {
+    if (selected || zoomedIndex !== null) {
       document.body.style.overflow = "hidden"; // disable scroll
     } else {
       document.body.style.overflow = ""; // restore scroll
     }
-  
+
     return () => {
       document.body.style.overflow = ""; // cleanup
     };
-  }, [selected]);  
+  }, [selected, zoomedIndex]);
 
   return (
     <>
       {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ml-8">
         {projects.map((proj) => (
           <div
             key={proj.id}
@@ -47,13 +48,13 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
         ))}
       </div>
 
-      {/* Modal */}
+      {/* Project Modal */}
       {selected && (
         <div
           className="absolute top-1/2 left-1/2 z-50 p-4"
           onClick={(e) => e.target === e.currentTarget && setSelected(null)}
         >
-          <div className="bg-white dark:bg-gray-800 rounded-lg max-w-2xl w-full p-6 shadow-lg transform -translate-x-1/2 -translate-y-1/2 max-h-[80vh] overflow-y-auto">
+          <div className="bg-white dark:bg-gray-800 rounded-lg max-w-2xl w-full p-6 shadow-lg transform -translate-x-1/2 -translate-y-1/2 max-h-[80vh] overflow-y-auto relative">
             {/* Close button */}
             <button
               className="absolute top-2 right-2 text-gray-600 dark:text-gray-300 font-bold text-xl"
@@ -68,16 +69,28 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
               {selected.longDescription}
             </p>
 
-            {/* Images */}
+            {/* Images with hover + zoom */}
             {selected.images && selected.images.length > 0 && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                 {selected.images.map((src, idx) => (
-                  <img
+                  <div
                     key={idx}
-                    src={src}
-                    alt={`${selected.title} image ${idx + 1}`}
-                    className="rounded shadow"
-                  />
+                    className="relative group cursor-pointer"
+                    onClick={() => setZoomedIndex(idx)}
+                  >
+                    <img
+                      src={src}
+                      alt={`${selected.title} image ${idx + 1}`}
+                      className="rounded shadow w-full h-full object-cover transition duration-300 group-hover:blur-[2px]"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                    {selected.imageCaptions && selected.imageCaptions[idx] && (
+                        <span className="text-white font-semibold bg-black/60 px-3 py-1 rounded">
+                            {selected.imageCaptions[idx]}
+                        </span>
+                        )}
+                    </div>
+                  </div>
                 ))}
               </div>
             )}
@@ -99,6 +112,46 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
               </div>
             )}
           </div>
+        </div>
+      )}
+
+      {/* Zoom Modal with arrows */}
+      {zoomedIndex !== null && selected && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-[60]"
+          onClick={(e) => e.target === e.currentTarget && setZoomedIndex(null)}
+        >
+          {/* Prev */}
+          <button
+            className="absolute left-4 text-white text-3xl font-bold"
+            onClick={(e) => {
+              e.stopPropagation();
+              setZoomedIndex(
+                (zoomedIndex - 1 + selected.images!.length) %
+                  selected.images!.length
+              );
+            }}
+          >
+            ‹
+          </button>
+
+          {/* Image */}
+          <img
+            src={selected.images![zoomedIndex]}
+            alt="zoomed project"
+            className="max-w-[90%] max-h-[90%] rounded shadow-lg"
+          />
+
+          {/* Next */}
+          <button
+            className="absolute right-4 text-white text-3xl font-bold"
+            onClick={(e) => {
+              e.stopPropagation();
+              setZoomedIndex((zoomedIndex + 1) % selected.images!.length);
+            }}
+          >
+            ›
+          </button>
         </div>
       )}
     </>

@@ -5,7 +5,8 @@ export type Project = {
     shortDescription: string;
     longDescription: string;
     thumbnail?: string; 
-    images?: string[];   
+    images?: string[]; 
+    imageCaptions?: string[];  
     links?: { label: string; url: string }[];
   };
   

@@ -20,8 +20,9 @@ const automationProjects: Project[] = [
     shortDescription: "Machine that turns itself off when it is turned on.",
     longDescription:
       "...",
-    thumbnail: "",
-    images: ["/srm-base.png", "/srm-baseplate.png", "/srm-schematic.png"],
+    thumbnail: "/srm.jpg",
+    images: ["/srm.jpg", "/srm-base.png", "/srm-baseplate.png", "/srm-schematic.png"],
+    imageCaptions: ["Finished protopype", "Solidworks model of base", "Baseplate DFX file for waterjet cutting", "Electrical schematic"],
   }
 ];
 

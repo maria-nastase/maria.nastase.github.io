@@ -11,7 +11,8 @@ const electricalProjects: Project[] = [
     longDescription:
       "...",
     thumbnail: "/tubefurnace-pcb1.jpg",
-    images: ["/tubefurnace-pcb1.jpg", "/tubefurnacepcb-2.png", "/tubefurnace-pcb3.png"]
+    images: ["/tubefurnace-pcb1.jpg", "/tubefurnacepcb-2.png", "/tubefurnace-pcb3.png"],
+    imageCaptions: ["Assembled PCB", "PCB design in KiCad", "Schematic"],
   },
   {
     id: "spin-coater-pcb",
@@ -21,7 +22,8 @@ const electricalProjects: Project[] = [
     longDescription:
       "...",
     thumbnail: "/spincoater-pcb.jpg",
-    images: ["/spincoater-pcb.jpg"]
+    images: ["/spincoater-pcb.jpg"],
+    imageCaptions: ["Assembled PCB"],
   }
 ];
 
