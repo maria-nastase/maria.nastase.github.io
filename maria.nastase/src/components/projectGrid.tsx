@@ -65,7 +65,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
 
             {/* Project Title */}
             <h2 className="text-2xl font-bold mb-2">{selected.title}</h2>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
+            <p className="text-gray-700 dark:text-gray-300 mb-4 whitespace-pre-line">
               {selected.longDescription}
             </p>
 

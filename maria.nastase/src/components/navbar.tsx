@@ -2,26 +2,28 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { ChevronDown } from "lucide-react";
 
 export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
-    <nav className="p-4 text-white flex gap-4 relative justify-content justify-end mr-5 mt-2">
+    <nav className="p-4 text-white flex gap-4 relative justify-content justify-end mr-8 mt-2">
       <Link href="/">Home</Link>
       <Link href="/about">About</Link>
 
       {/* Dropdown */}
-      <div className="relative">
+      <div className="relative flex justify-content">
+        <Link href="/projects">Projects</Link>
         <button
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           className="flex items-center gap-1 focus:outline-none"
         >
-          Projects ▼
+          <ChevronDown />
         </button>
 
         {isDropdownOpen && (
-          <div className="absolute top-full left-0 mt-2 w-30 rounded shadow-lg z-50 overflow-hidden">
+          <div className="absolute top-full left-0 mt-2 w-30 rounded shadow-lg z-50 overflow-hidden mr-20">
             <Link
               href="/projects/automation-mechatronics"
               className="block w-full px-4 py-2 bg-white text-black hover:bg-gray-600"
