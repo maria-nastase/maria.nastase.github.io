@@ -26,7 +26,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
   return (
     <>
       {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ml-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ml-8 mr-8">
         {projects.map((proj) => (
           <div
             key={proj.id}

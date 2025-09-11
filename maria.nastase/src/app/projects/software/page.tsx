@@ -31,7 +31,10 @@ const softwareProjects: Project[] = [
     category: "Software",
     shortDescription: "An AI-powered tool for debating practice, providing real-time argument scoring, feedback, and counter-arguments.",
     longDescription:
-      "...",
+      `ArguMentor serves as a virtual debate coach, enhancing learning in a fun and interactive way. It is an AI-powered platform designed to help students and debaters improve their argumentation skills. Users input debate statements, and the app provides a counter-argument which is automatically read aloud, helping them refine their reasoning and communication. It gives instant feedback and assigns a score based on structure, clarity, and logic.
+      
+      Frontend: React, Typescript, Tailwind CSS
+      Backend: Next.js, GPT-4 API, Whisper API`,
     thumbnail: "/argumentor-logo.jpg",
     images: ["/argumentor.png"],
     imageCaptions: ["Chatbot UI"],
@@ -43,7 +46,10 @@ const softwareProjects: Project[] = [
     category: "Software",
     shortDescription: "Translation tool to overcome language barriers in telecommunications customer service.",
     longDescription:
-      "...",
+      `Our tool enables speech detection in any foreign language—such as French, Spanish, Chinese, and more—and converts this speech into text, translating it instantly into English. The translation is then provided to the customer support agent both through audio and text, allowing them to understand and communicate with clients more effectively, bridging language gaps and enhancing the overall support experience.
+      
+      Frontend: React, Tailwind CSS
+      Backend: Next.js, Node.js, TypeScript, GPT-4 API, Whisper API`,
     thumbnail: "/connectify-logo.png",
     images: ["/images/useless-1.jpg", "/images/useless-2.jpg"],
     imageCaptions: ["Chatbot UI"],
