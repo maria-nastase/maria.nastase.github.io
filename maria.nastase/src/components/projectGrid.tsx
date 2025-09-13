@@ -30,7 +30,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
         {projects.map((proj) => (
           <div
             key={proj.id}
-            className="rounded-lg bg-neutral-800 bg-opacity-90 shadow hover:shadow-lg cursor-pointer overflow-hidden transition mb-10"
+            className="rounded-lg bg-neutral-800 bg-opacity-90 shadow hover:shadow-lg cursor-pointer overflow-hidden transition mb-10 glass-card"
             onClick={() => setSelected(proj)}
           >
             {proj.thumbnail && (
