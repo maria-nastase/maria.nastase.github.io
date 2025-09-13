@@ -10,7 +10,7 @@ export default function About() {
 
         <div id="education">
             <h2>Education</h2>
-            <div className="education-box">
+            <div className="education-box glass-card">
                 <h3>University of Waterloo</h3>
                 <h4>BASc in Systems Design Engineering, 2023 - Present</h4>
                 <p><a href="https://uwaterloo.ca/engineering/future-students/systems-design-engineering">Systems Design Engineering</a> is a unique program combining multiple engineering disciplines, mainly mechanical, electrical and software, in addition to mathematical modelling and human factors, for the design of complex systems. </p>
@@ -20,7 +20,7 @@ export default function About() {
                 </ul>
             </div>
             
-            <div className="education-box">
+            <div className="education-box glass-card">
                 <h3>York Mills Collegiate Institute</h3>
                 <h4>Ontario Secondary School Diploma with Honours French Immersion Certificate, 2019 - 2023</h4>
                 <ul className="academic-stats" id="ym-grades">

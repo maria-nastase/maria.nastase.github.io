@@ -5,7 +5,7 @@ export default function Home() {
       <div className="p-8" id="intro">
         <h1 className="text-2xl font-bold mb-6">Hi, I&#39;m Maria.</h1>
         <h2>2B Systems Design Engineering Student @ UWaterloo</h2>
-        <h2>Interested in Mechatronics, Industrial Automation and Robotics</h2>
+        <h3>Interested in Mechatronics, Industrial Automation and Robotics</h3>
         <div className="flex gap-6 text-gray-700 mt-6">
           {/* Resume */}
           <a

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Raleway, Poppins } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer";
 import { Analytics } from "@vercel/analytics/next"
@@ -32,6 +32,8 @@ export default function RootLayout({
       >
         <div className="flex-grow">{/* Main content area */}
         {children}
+        <Analytics />
+        <SpeedInsights />
         </div>
         <Footer />
       </body>
