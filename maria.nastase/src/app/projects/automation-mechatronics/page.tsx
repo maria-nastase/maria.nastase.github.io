@@ -13,12 +13,12 @@ const automationProjects: Project[] = [
       A six-level mobile aluminum extrusion cart was designed to store the parts so that the operator only has to load and unload it once per shift. This was the best solution due to the lack of space in the area and the amount of parts needed to be handled without operator intervention. The rack includes extra storage space, a bin to place parts for inspection, and a bin that acts as a buffer station for finished parts.
       PHSR guidelines and relevant safety standards were analyzed to design a layout that ensures safety while maintaining the mobility of the system. This includes laser safety scanners and physical guarding around the dangerous areas of the machines.
       
-      The main cobot motion was simulated in the Fanuc Roboguide software to test the cobot reach and optimize the path. The rack was designed in Solidworks using weldment profiles, and an FEA was run using bolt connections to identify and strengthen high-stress areas. Calculations were also performed to analyze stability and ergonomics, and the ensure the cobot is able to pull the drawer handles. GD&T drawings were later created for all rack components.
-      Studies were performed for the ROI
+      The cobot motion was simulated in the Fanuc Roboguide software to test the cobot reach and optimize the path. The rack was designed in Solidworks using weldment profiles, and an FEA was run using bolt connections to identify and strengthen high-stress areas. Calculations were also performed to analyze stability and ergonomics, and the ensure the cobot is able to pull the drawer handles. GD&T drawings were later created for all rack components.
+      Detailed Statements of Requirements were provided to potential suppliers for the project components. Then, a comprehensive proposal was presented to management including quotations, detailed requirements and ROI calculations, which was well received by management.
       `,
     thumbnail: "/cobotThumbnail.png",
-    images: ["/cobotThumbnail.png", "/cobot-flowchart.png"],
-    imageCaptions: ["3D view of layout", "General cobot logic flowchart"],
+    images: ["/cobotThumbnail.png", "/cobot-flowchart.png", "/cobot-cart.png"],
+    imageCaptions: ["3D view of layout", "General cobot logic flowchart", "Model of mobile cart" ],
   },
   {
     id: "useless-machine",
