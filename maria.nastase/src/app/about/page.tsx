@@ -25,7 +25,7 @@ export default function About() {
                 <h4>Ontario Secondary School Diploma with Honours French Immersion Certificate, 2019 - 2023</h4>
                 <ul className="academic-stats" id="ym-grades">
                     <li>University Admission Average: 99.2%</li>
-                    <li>Governor General's Academic Medal for the highest average out of 200+ students in grades 11 and 12</li>
+                    <li>Governor General&#39;s Academic Medal for the highest average out of 200+ students in grades 11 and 12</li>
                 </ul>
             </div>
         </div>

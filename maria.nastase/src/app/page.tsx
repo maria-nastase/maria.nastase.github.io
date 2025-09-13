@@ -3,7 +3,7 @@ import { FileText, Github, Linkedin, Mail } from "lucide-react"
 export default function Home() {
     return (
       <div className="p-8" id="intro">
-        <h1 className="text-2xl font-bold mb-6">Hi, I'm Maria.</h1>
+        <h1 className="text-2xl font-bold mb-6">Hi, I&#39;m Maria.</h1>
         <h2>2B Systems Design Engineering Student @ UWaterloo</h2>
         <h2>Interested in Industrial Automation and Robotics</h2>
         <div className="flex gap-6 text-white mt-6">
