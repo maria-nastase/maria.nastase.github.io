@@ -49,12 +49,12 @@ export default function Timeline() {
   };
 
   return (
-    <div className="relative ml-12">
+    <div className="relative">
       {/* Vertical line */}
       <div className="absolute left-0 top-0 h-full border-l-2 border-gray-300 dark:border-gray-600"></div>
 
       {jobs.map((job, idx) => (
-        <div key={idx} className="mb-10 ml-6 relative">
+        <div key={idx} className="mb-10 ml-6 relative glass-card">
 
           <button
             onClick={() => toggle(idx)}
