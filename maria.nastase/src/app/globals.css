@@ -20,28 +20,31 @@
   }
 }
 
+/* WebKit browsers (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
-  width: 10px;               
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1f2937;     
   border-radius: 10px;
+  background: #ffdcea;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4b5563;       
+  background: #ffdcea;
   border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.25);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6b7280;       
+  background: linear-gradient(180deg, #f472b6, #a855f7, #2dd4bf);
 }
 
-/* Firefox scrollbar */
+/* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #4b5563 #1f2937;
+  /* thumb | track */
+  scrollbar-color: rgba(255, 255, 255, 0.4) #ffdcea;
 }
 
 
@@ -79,11 +82,15 @@ body {
 
 .glass-card p {
   font-size: 0.95rem;
-  color: #1f2937; /* slate-800 */
+  color: #1f2937; 
 }
 
 .glass-card.education-box {
   border-left: 4px solid #d5fcff; /* teal/blue accent */
+}
+
+.glass-card.dropdown {
+  padding: 0;
 }
 
 .intro-icon:hover {
@@ -100,9 +107,12 @@ body {
 
 
 h1 {
-  color: #ffb3d1;
+  /*color: #ffb3d1;*/
   font-size: 3rem;
   font-family: Raleway, sans-serif;
+  background: linear-gradient(to right, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h2 {
@@ -110,6 +120,7 @@ h2 {
   font-size: 2rem;
   margin-top: 2rem;
   font-family: Raleway, sans-serif;
+  font-weight: 600;
 }
 
 h3 {
@@ -162,6 +173,10 @@ ul {
   color: #000000;
   box-shadow: 0 4px 12px rgba(236, 72, 153, 0.4); 
   transform: translateY(-4px);
+}
+
+.dropdown .page-button{
+  border-radius: 0;
 }
 
 .socials {
