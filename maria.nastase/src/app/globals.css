@@ -47,7 +47,6 @@
   scrollbar-color: rgba(255, 255, 255, 0.4) #ffdcea;
 }
 
-
 body {
   background: linear-gradient(135deg, var(--gradient-start) 5%, var(--gradient-end) 35%, rgb(246, 204, 252) 90%, #ffb3d1 100%);
   min-height: 100vh;
@@ -72,12 +71,21 @@ body {
 }
 
 .glass-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  margin-top: 0;
   background: linear-gradient(to right, #ec4899, #8b5cf6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.glass-card h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  color: #421045; /* dark purple */
 }
 
 .glass-card p {
@@ -86,7 +94,11 @@ body {
 }
 
 .glass-card.education-box {
-  border-left: 4px solid #d5fcff; /* teal/blue accent */
+  border-left: 4px solid #d5fcff; 
+}
+
+.glass-card.work-box {
+  border-left: 4px solid #eec9fc; 
 }
 
 .glass-card.dropdown {

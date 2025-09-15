@@ -63,7 +63,7 @@ const softwareProjects: Project[] = [
     longDescription:
       "This website was built using Next.js, Typescript and Tailwind CSS. It is hosted on Vercel.",
     thumbnail: "/website-home.png",
-    images: ["/website-home.png"],
+    images: ["/website-home-full.png"],
     imageCaptions: ["Home page"],
     links: [{label: "Website", url: "https://marianastase.vercel.app/"}, {label: "Github", url: "https://github.com/maria-nastase/maria.nastase.github.io"}]
   }
