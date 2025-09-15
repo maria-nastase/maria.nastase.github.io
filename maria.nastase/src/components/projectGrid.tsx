@@ -37,12 +37,12 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
               <img
                 src={proj.thumbnail}
                 alt={proj.title}
-                className="w-full h-60 object-cover"
+                className="w-full h-60 object-cover rounded"
               />
             )}
             <div className="p-4">
               <h3 className="font-semibold text-lg">{proj.title}</h3>
-              <p className="text-white-600 text-sm">{proj.shortDescription}</p>
+              <p>{proj.shortDescription}</p>
             </div>
           </div>
         ))}
@@ -50,21 +50,21 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
 
       {/* Project Modal */}
       {selected && (
-        <div
-          className="absolute top-1/2 left-1/2 z-50 p-4"
-          onClick={(e) => e.target === e.currentTarget && setSelected(null)}
-        >
-          <div className="bg-white dark:bg-gray-800 rounded-lg max-w-2xl w-full p-6 shadow-lg transform -translate-x-1/2 -translate-y-1/2 max-h-[80vh] overflow-y-auto relative">
+         <div
+         className="fixed inset-0 z-50 bg-black/20 flex items-center justify-center"
+         onClick={(e) => e.target === e.currentTarget && setSelected(null)}
+       >
+         <div className="relative bg-white rounded-lg max-w-2xl w-full p-6 shadow-lg max-h-[80vh] overflow-y-auto">
             {/* Close button */}
             <button
-              className="absolute top-2 right-2 text-gray-600 dark:text-gray-300 font-bold text-xl"
+              className="absolute top-4 right-2 text-gray-600 font-bold text-xl hover:text-black hover:-translate-y-1"
               onClick={() => setSelected(null)}
             >
               ✕
             </button>
 
             {/* Project Title */}
-            <h2 className="text-2xl font-bold mb-2">{selected.title}</h2>
+            <h2 className="text-2xl font-bold mb-2 !mt-0">{selected.title}</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4 whitespace-pre-line">
               {selected.longDescription}
             </p>
@@ -104,9 +104,9 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline"
+                    className=""
                   >
-                    {link.label}
+                    <h4 className="project-link">{link.label}</h4>
                   </a>
                 ))}
               </div>

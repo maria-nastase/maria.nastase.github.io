@@ -33,11 +33,11 @@
 ::-webkit-scrollbar-thumb {
   background: #ffdcea;
   border-radius: 10px;
-  border: 2px solid rgba(255,255,255,0.25);
+  border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #f472b6, #a855f7, #2dd4bf);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 /* Firefox */
@@ -247,3 +247,18 @@ ul {
   opacity: 1;
   transform: translateY(0);
 }
+
+.project-link {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  color: #421045;
+}
+
+.modal-content {
+  margin-top: 20vh;
+  position: fixed;
+  inset: 0px;
+}
+
