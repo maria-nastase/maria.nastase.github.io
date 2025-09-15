@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { Project } from "@/types/project";
 
 type ProjectGridProps = {
@@ -10,6 +11,11 @@ type ProjectGridProps = {
 export default function ProjectGrid({ projects }: ProjectGridProps) {
   const [selected, setSelected] = useState<Project | null>(null);
   const [zoomedIndex, setZoomedIndex] = useState<number | null>(null);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, [])
 
   useEffect(() => {
     if (selected || zoomedIndex !== null) {
@@ -49,7 +55,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
       </div>
 
       {/* Project Modal */}
-      {selected && (
+      {isClient && selected && createPortal(
          <div
          className="fixed inset-0 z-50 bg-black/20 flex items-center justify-center"
          onClick={(e) => e.target === e.currentTarget && setSelected(null)}
@@ -112,11 +118,12 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
               </div>
             )}
           </div>
-        </div>
+        </div>,
+        document.body
       )}
 
       {/* Zoom Modal with arrows */}
-      {zoomedIndex !== null && selected && (
+      {isClient && zoomedIndex !== null && selected && createPortal(
         <div
           className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-[60]"
           onClick={(e) => e.target === e.currentTarget && setZoomedIndex(null)}
@@ -152,7 +159,8 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
           >
             ›
           </button>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
