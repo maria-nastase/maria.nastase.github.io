@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <nav className="flex relative flex glass-card items-center pl-4 pr-4 mb-4">
-      <div className="flex justify-start"><img src="/logo.png" className="logo w-10 h-10 object-cover"/></div>
+      <div className="flex justify-start">{/*<img src="/logo.png" className="logo w-10 h-10 object-cover"/>*/}<h1 className="font-bold !text-3xl">Maria Nastase</h1></div>
       <div className="flex justify-end flex-grow gap-4 mr-8">
         <Link href="/" className="page-button">Home</Link>
         <Link href="/about" className="page-button">About</Link>

@@ -35,7 +35,7 @@ export default function ElectricalPage() {
   return (
     <main className="">
       <Navbar />
-      <h1 className="text-2xl font-bold mb-6">Electrical + Hardware Projects</h1>
+      <h2 className="text-2xl font-bold mb-6 ml-4">Electrical + Hardware Projects</h2>
       <ProjectGrid projects={electricalProjects} />
     </main>
   );

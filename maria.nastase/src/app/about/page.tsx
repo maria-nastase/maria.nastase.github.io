@@ -6,10 +6,10 @@ export default function About() {
     <div className="aboutme-section" id="about">
         <Navbar />
 
-        <h1 className="text-2xl font-bold mb-6">About Me</h1>
+        <h2 className="text-5xl font-bold mb-6 ml-4">About Me</h2>
 
         <div id="education">
-            <h2>Education</h2>
+            <h3 className="ml-4 mb-4">Education</h3>
             <div className="education-box glass-card mb-4 p-4">
                 <h3>University of Waterloo</h3>
                 <h4>BASc in Systems Design Engineering, 2023 - Present</h4>
@@ -31,7 +31,7 @@ export default function About() {
         </div>
 
         <div className="aboutme-section" id="work-history">
-            <h2>Work History</h2>
+            <h3 className="ml-4 mb-4">Work History</h3>
 
             <Timeline />
 

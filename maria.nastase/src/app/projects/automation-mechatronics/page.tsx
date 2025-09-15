@@ -39,7 +39,7 @@ export default function AutomationPage() {
   return (
     <main className="">
       <Navbar />
-      <h1 className="text-2xl font-bold mb-6">Automation + Mechatronics Projects</h1>
+      <h2 className="text-2xl font-bold mb-6 ml-4">Automation + Mechatronics Projects</h2>
       <ProjectGrid projects={automationProjects} />
     </main>
   );

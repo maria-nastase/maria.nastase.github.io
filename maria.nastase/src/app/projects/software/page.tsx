@@ -61,11 +61,11 @@ const softwareProjects: Project[] = [
     category: "Software",
     shortDescription: "This website, showcasing my projects and experience.",
     longDescription:
-      "...",
-    thumbnail: "",
-    images: ["/images/useless-1.jpg", "/images/useless-2.jpg"],
+      "This website was built using Next.js, Typescript and Tailwind CSS. It is hosted on Vercel.",
+    thumbnail: "/website-home.png",
+    images: ["/website-home.png"],
     imageCaptions: ["Home page"],
-    links: [{label: "Github", url: "https://github.com/maria-nastase/maria.nastase.github.io"}]
+    links: [{label: "Website", url: "https://marianastase.vercel.app/"}, {label: "Github", url: "https://github.com/maria-nastase/maria.nastase.github.io"}]
   }
 ];
 
@@ -73,7 +73,7 @@ export default function SoftwarePage() {
   return (
     <main className="">
       <Navbar />
-      <h1 className="text-2xl font-bold mb-6">Software Projects</h1>
+      <h2 className="text-2xl font-bold mb-6 ml-4">Software Projects</h2>
       <ProjectGrid projects={softwareProjects} />
     </main>
   );
