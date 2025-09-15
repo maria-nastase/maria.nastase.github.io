@@ -153,6 +153,11 @@ ul {
   margin-left: 0.5rem;
 }
 
+li {
+  color: #1f2937;
+  font-size: 0.9rem;
+}
+
 #intro-text {
   margin-top: 10rem;
 }
