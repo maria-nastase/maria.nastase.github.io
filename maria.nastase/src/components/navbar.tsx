@@ -8,9 +8,15 @@ export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
-    <nav className="flex relative flex glass-card items-center pl-4 pr-4 mb-4">
-      <div className="flex justify-start">{/*<img src="/logo.png" className="logo w-10 h-10 object-cover"/>*/}<h1 className="font-bold !text-3xl">Maria Nastase</h1></div>
-      <div className="flex justify-end flex-grow gap-4 mr-8">
+    <nav className="flex flex-col sm:flex-row items-center glass-card px-4 mb-4 w-full">
+      <div className="w-full sm:w-auto text-center sm:text-left">
+        <h1 className="font-bold text-2xl sm:text-3xl whitespace-normal break-words">
+          Maria Nastase
+        </h1>
+      </div>
+
+      <div className="w-full sm:w-auto sm:ml-auto flex justify-center sm:justify-end flex-wrap gap-4 mt-3 sm:mt-0">
+    
         <Link href="/" className="page-button">Home</Link>
         <Link href="/about" className="page-button">About</Link>
 

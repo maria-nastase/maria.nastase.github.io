@@ -43,7 +43,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
               <img
                 src={proj.thumbnail}
                 alt={proj.title}
-                className="w-full h-60 object-cover rounded"
+                className="w-full h-40 md:h-60 sm:h-40 object-cover rounded"
               />
             )}
             <div className="p-4">
@@ -64,7 +64,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
             {/* Close button */}
             <button
               className="absolute top-4 right-2 text-gray-600 font-bold text-xl hover:text-black hover:-translate-y-1"
-              onClick={() => setSelected(null)}
+              onClick={(e) => e.target === e.currentTarget && setSelected(null)}
             >
               ✕
             </button>
@@ -125,12 +125,12 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
       {/* Zoom Modal with arrows */}
       {isClient && zoomedIndex !== null && selected && createPortal(
         <div
-          className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-[60]"
+          className="fixed inset-0 bg-white bg-opacity-70 flex justify-center items-center z-[60]"
           onClick={(e) => e.target === e.currentTarget && setZoomedIndex(null)}
         >
           {/* Prev */}
           <button
-            className="absolute left-4 text-white text-3xl font-bold"
+            className="arrow glass-card absolute left-4 text-fuchsia-950 text-3xl font-bold flex items-center justify-center h-1 w-3"
             onClick={(e) => {
               e.stopPropagation();
               setZoomedIndex(
@@ -151,7 +151,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
 
           {/* Next */}
           <button
-            className="absolute right-4 text-white text-3xl font-bold"
+            className="arrow glass-card absolute right-4 text-fuchsia-950 hover:text- text-3xl font-bold flex items-center justify-center h-1 w-3"
             onClick={(e) => {
               e.stopPropagation();
               setZoomedIndex((zoomedIndex + 1) % selected.images!.length);
