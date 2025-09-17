@@ -51,6 +51,7 @@ const softwareProjects: Project[] = [
       Frontend: React, Tailwind CSS
       Backend: Next.js, Node.js, TypeScript, GPT-4 API, Whisper API`,
     thumbnail: "/connectify-logo.png",
+    images: ["/connectify-full.png"],
     links: [{label: "Github", url: "https://github.com/maria-nastase/Connectify"}]
   },
   {

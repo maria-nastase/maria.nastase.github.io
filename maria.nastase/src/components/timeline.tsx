@@ -12,11 +12,11 @@ type Job = {
 
 const jobs: Job[] = [
   {
-    role: "Automation, Manufacturing and Project Management Intern",
+    role: "Automation and Manufacturing Engineering Intern",
     company: "A. Berger Precision",
     date: "May 2025 - Aug. 2025",
     description:
-      "Lead development of mobile cobot cell for automating burinshing machines and prepared manufacturing drawings and documents for automotive parts.",
+      "Led development of mobile cobot cell for automating burinshing machines and prepared manufacturing drawings and documents for automotive parts.",
   },
   {
     role: "Electrical Engineering Team Member",
