@@ -2,7 +2,7 @@ import { Github, Linkedin, Mail, FileText } from "lucide-react";
 
 export default function Footer() {
   return (
-    <div className="custom-footer w-full border-t border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 mb-0 glass-card">
+    <div className="custom-footer w-full border-t border-gray-300 bg-gray-100 text-gray-700 mb-0 glass-card">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         
         {/* Copyright */}
@@ -11,7 +11,7 @@ export default function Footer() {
         </p>
 
         {/* Links */}
-        <div className="flex gap-6 text-gray-600 dark:text-gray-300">
+        <div className="flex gap-6 text-gray-600">
           {/* Resume */}
           <a
             href="\Maria Nastase Resume.pdf"

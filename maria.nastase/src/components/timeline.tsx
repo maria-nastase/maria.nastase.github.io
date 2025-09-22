@@ -37,7 +37,7 @@ const jobs: Job[] = [
     company: "University of Waterloo",
     date: "Jan. 2024 - Apr. 2024",
     description:
-      "Provided technical support and troubleshooting for university staff and students."
+      "Technical support and troubleshooting for university staff and students."
   }
 ];
 
@@ -51,7 +51,7 @@ export default function Timeline() {
   return (
     <div className="relative">
       {/* Vertical line */}
-      {/*<div className="absolute left-0 top-0 h-full border-l-2 border-gray-300 dark:border-gray-600"></div>*/}
+      {/*<div className="absolute left-0 top-0 h-full border-l-2 border-gray-300"></div>*/}
 
       {/*{jobs.map((job, idx) => (
         <div key={idx} className="mb-10 ml-6 relative glass-card">
