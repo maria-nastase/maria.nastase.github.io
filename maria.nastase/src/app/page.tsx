@@ -3,14 +3,14 @@ import { FileText, Github, Linkedin, Mail } from "lucide-react"
 export default function Home() {
     return (
       <div className="p-8">
-        <div className="intro flex justify-between">
+        <div className="intro flex flex-col-reverse sm:flex-row items-center sm:items-start justify-between">
           <div className="intro-text mt-20">
             <h1 className="text-2xl font-bold mb-6">Hi, I&#39;m Maria.</h1>
             <h2>2B Systems Design Engineering Student @ UWaterloo</h2>
             <h3>Interested in Mechatronics, Industrial Automation and Robotics</h3>
           </div>
           <div className="pfp">
-            <img src="\photo.jpg" className="rounded-full w-60 h-60 object-cover mr-10 mt-10 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] backdrop-blur-md" />
+            <img src="\photo.jpg" className="rounded-full aspect-square w-30 sm:w-30 md:w-60 object-cover mr-10 mt-10 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] backdrop-blur-md" />
           </div>
         </div>
         <div className="flex gap-6 text-gray-700 mt-6">
